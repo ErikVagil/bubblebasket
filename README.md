@@ -11,3 +11,9 @@ Key features
  - Ability to check off items while shopping
  - Ability to clear list easily
  - Ability to add custom items to bubble tree
+
+Log:<br />
+Amazon Web Services - EC2<br />
+ - Elastic IP address: 3.138.235.178
+ - Public DNS: ec2-3-138-235-178.us-east-2.compute.amazonaws.com
+ - AWS is pretty cool :>
