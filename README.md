@@ -17,8 +17,10 @@ Amazon Web Services - EC2<br />
  - Elastic IP address: 3.138.235.178
  - Public DNS: ec2-3-138-235-178.us-east-2.compute.amazonaws.com
  - AWS is pretty cool :>
+
 <hr>
-What I want to remember from Simon-CSS:
+
+## What I want to remember from Simon-CSS
  - One of the biggest issues I had was with things not resizing properly. Resizing mainly happens in `body`, `@media`, and any relevant `div` blocks.
  - The Bootstrap docs are very helpful! They show syntax and different possible options and components. Also good for debugging.
  - Ideally, I should figure out and write out the header/footer/any repetitive elements so I don't have to rewrite them multiple times if there's an issue down the line.
