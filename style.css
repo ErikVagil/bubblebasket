@@ -15,8 +15,14 @@ header {
 
 main {
     display: flex;
-    flex: 1 calc(100vh - 70px);
+    flex: 1 calc(100vh - 100px);
     background-color: rgb(35, 51, 88);
+}
+
+footer {
+    flex: 0 30px;
+    align-items: center;
+    background-color: rgb(28, 39, 64);
 }
 
 .bubbles {
@@ -25,7 +31,7 @@ main {
     justify-content: center;
     align-items: center;
     width: 100%;
-    min-height: calc(100vh - 70px);
+    min-height: calc(100vh - 100px);
 }
 
 .bubbles-list {
