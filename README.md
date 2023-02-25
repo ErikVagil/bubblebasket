@@ -20,6 +20,15 @@ Amazon Web Services - EC2<br />
 
 <hr>
 
+### What I learned from making my startup HTML and CSS
+ - I got a lot better at using the flex property, which I'm really happy about. A tip I want to remember is that the flex property is that of the parent div, not always the individual. That tripped me up a bit doing this project. It's a lot of trial and error
+ - Making the header and setting up the page before using it as a template saved me a lot of time
+ - I learned how to import and use Bootstrap icons on my website to make it look good
+ - Variables! It's nice to have a variable representing something at the top of the CSS file and use it throughout the stylesheet--that way if I need to change it, I only need to change it once
+ - I'm definitely not done with the layout of the project. There's a lot of stuff I want to polish and add, so I'm going to work on it some more after this assignment. This was just a template/the bare minimum
+
+<hr>
+
 ### What I want to remember from the suite of JavaScript assignments
  - Arrow functions are just lambdas
  - Arrays are like Python lists but called arrays
