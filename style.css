@@ -1,3 +1,7 @@
+:root {
+    --bubble-diameter: 15vh;
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -13,4 +17,49 @@ main {
     display: flex;
     flex: 1 calc(100vh - 70px);
     background-color: rgb(35, 51, 88);
+}
+
+.bubbles {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: calc(100vh - 70px);
+}
+
+.bubbles-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    list-style: none;
+    padding: 0;
+}
+
+.bubble {
+    width: var(--bubble-diameter);
+    height: var(--bubble-diameter);
+    border-radius: 50%;
+    background-color: rgb(89, 109, 158);
+    margin: 5px;
+}
+
+.bubble:hover {
+    background-color: rgb(113, 132, 181);
+}
+
+.bubble-link {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    text-align: center;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    color: white;
 }
