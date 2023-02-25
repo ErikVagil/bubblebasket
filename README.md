@@ -20,8 +20,15 @@ Amazon Web Services - EC2<br />
 
 <hr>
 
-## What I want to remember from Simon-CSS
- - One of the biggest issues I had was with things not resizing properly. Resizing mainly happens in `body`, `@media`, and any relevant `div` blocks.
- - The Bootstrap docs are very helpful! They show syntax and different possible options and components. Also good for debugging.
- - Ideally, I should figure out and write out the header/footer/any repetitive elements so I don't have to rewrite them multiple times if there's an issue down the line.
- - Using `span` tags is great for isolating and phrasing chunks of elements for styling.
+### What I want to remember from the suite of JavaScript assignments
+ - Arrow functions are just lambdas
+ - Arrays are like Python lists but called arrays
+ - Array push and pop functions work like a stack, not a queue
+ - Anonymous functions have to be used to pass a function as a variable
+ 
+
+### What I want to remember from Simon-CSS
+ - One of the biggest issues I had was with things not resizing properly. Resizing mainly happens in `body`, `@media`, and any relevant `div` blocks
+ - The Bootstrap docs are very helpful! They show syntax and different possible options and components. Also good for debugging
+ - Ideally, I should figure out and write out the `header`/`footer`/any repetitive elements so I don't have to rewrite them multiple times if there's an issue down the line
+ - Using `span` tags is great for isolating and phrasing chunks of elements for styling
