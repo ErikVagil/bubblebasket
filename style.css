@@ -1,0 +1,16 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-width: 320px;
+}
+
+header {
+    flex: 0 70px;
+    background-color: rgb(28, 39, 64);
+}
+
+main {
+    display: flex;
+    flex: 1 calc(100vh - 70px);
+    background-color: rgb(35, 51, 88);
+}
