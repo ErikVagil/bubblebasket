@@ -41,3 +41,9 @@ Amazon Web Services - EC2<br />
  - The Bootstrap docs are very helpful! They show syntax and different possible options and components. Also good for debugging
  - Ideally, I should figure out and write out the `header`/`footer`/any repetitive elements so I don't have to rewrite them multiple times if there's an issue down the line
  - Using `span` tags is great for isolating and phrasing chunks of elements for styling
+
+### What I want to remember from Simon-Javascript
+ - Make sure to link the elements in the HTML files to the functions/objects in the JavaScript file
+ - Use localStorage to save and load using cookies
+ - The ternary operator ?? is really convenient for making code concise
+ - Partitioning code into classes makes for easy and reusable code
