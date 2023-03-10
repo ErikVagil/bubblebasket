@@ -75,3 +75,10 @@ footer {
     text-decoration: none;
     color: white;
 }
+
+@media (max-width: 350px)
+{
+    footer {
+        font-size: 0.95em;
+    }
+}
