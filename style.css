@@ -25,6 +25,12 @@ footer {
     background-color: rgb(28, 39, 64);
 }
 
+.anchor-top-left {
+    position: absolute;
+    left: 10px;
+    top: 80px;
+}
+
 .bubbles {
     display: flex;
     flex-wrap: wrap;
