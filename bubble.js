@@ -11,7 +11,7 @@ function addItemToCookies(category, item)
     // See if item is already in list
     let foundItemIndex = items.findIndex((itemObject) => 
     {
-        return itemObject.itemValue === item;
+        return (itemObject.itemValue === item) && (itemObject.categoryValue === category);
     });
     if (foundItemIndex >= 0)
     {
