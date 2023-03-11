@@ -27,6 +27,11 @@ Amazon Web Services - EC2<br />
  - Variables! It's nice to have a variable representing something at the top of the CSS file and use it throughout the stylesheet--that way if I need to change it, I only need to change it once
  - I'm definitely not done with the layout of the project. There's a lot of stuff I want to polish and add, so I'm going to work on it some more after this assignment. This was just a template/the bare minimum
 
+### What I learned from making my startup JavaScript
+ - Using the browser developer tools is really great for squashing bugs and finding problems that aren't manifesting themselves
+ - Know what the return value of functions is \(like if it returns a number, array, object, etc\)! That'll help avoid mistakes and bugs
+ - Make code that's as reusable as possible and add parameters in the onclick HTML event
+
 <hr>
 
 ### What I want to remember from the suite of JavaScript assignments
