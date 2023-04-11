@@ -99,14 +99,14 @@ secureApiRouter.use(async (request, response, next) =>
 
 secureApiRouter.get("/cart", async (request, response) =>
 {
-    const cart = await DB.getUserCart(request.cookies[authCookieName]);
+    const cart = await DB.getUserCart(request.body.email);
     response.send(cart);
 });
 
 secureApiRouter.post("/item", async (request, response) =>
 {
-    DB.addItemToUser(request.cookies[authCookieName], request.body.item);
-    const cart = await DB.getUserCart(request.cookies[authCookieName]);
+    DB.addItemToUser(request.body.email, request.body.item);
+    const cart = await DB.getUserCart(request.body.email);
     response.send(cart);
 });
 

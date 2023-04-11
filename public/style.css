@@ -1,5 +1,11 @@
 :root {
     --bubble-diameter: 15vh;
+    --primary-color: rgb(35, 51, 88);
+    --accent-color: rgb(28, 39, 64);
+    --category-bubble-color: rgb(89, 109, 158);
+    --category-hover-color: rgb(113, 132, 181);
+    --item-bubble-color: rgb(69, 119, 75);
+    --item-hover-color: rgb(95, 145, 101);
 }
 
 body {
@@ -10,19 +16,19 @@ body {
 
 header {
     flex: 0 70px;
-    background-color: rgb(28, 39, 64);
+    background-color: var(--accent-color);
 }
 
 main {
     display: flex;
     flex: 1 calc(100vh - 100px);
-    background-color: rgb(35, 51, 88);
+    background-color: var(--primary-color);
 }
 
 footer {
     flex: 0 30px;
     align-items: center;
-    background-color: rgb(28, 39, 64);
+    background-color: var(--accent-color);
 }
 
 .anchor-top-left {
@@ -66,20 +72,20 @@ footer {
     width: var(--bubble-diameter);
     height: var(--bubble-diameter);
     border-radius: 50%;
-    background-color: rgb(89, 109, 158);
+    background-color: var(--category-bubble-color);
     margin: 5px;
 }
 
 .bubble.item {
-    background-color: rgb(69, 119, 75);
+    background-color: var(--item-bubble-color);
 }
 
 .bubble:hover {
-    background-color: rgb(113, 132, 181);
+    background-color: var(--category-hover-color);
 }
 
 .bubble.item:hover {
-    background-color: rgb(95, 145, 101);
+    background-color: var(--item-hover-color);
 }
 
 a.bubble-link {

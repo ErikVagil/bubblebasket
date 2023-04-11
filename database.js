@@ -43,17 +43,17 @@ async function createUser(email, password)
     return user;
 }
 
-async function addItemToUser(token, item)
+async function addItemToUser(email, item)
 {
     userCollection.updateOne(
-        { token: token },
+        { email: email },
         { $push: { cart: item } }
     );
 }
 
-function getUserCart(token)
+function getUserCart(email)
 {
-    return getUserByToken(token).cart;
+    return getUser(email).cart;
 }
 
 module.exports = 
