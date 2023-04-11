@@ -1,0 +1,32 @@
+:root {
+    --primary-color: rgb(35, 51, 88);
+    --accent-color: rgb(28, 39, 64);
+    --category-bubble-color: rgb(89, 109, 158);
+    --category-hover-color: rgb(113, 132, 181);
+    --item-bubble-color: rgb(69, 119, 75);
+    --item-hover-color: rgb(95, 145, 101);
+}
+
+.random-joke {
+    position: absolute;
+    top: 80px;
+    transform: translate(-50%, 0);
+    left: 50%;
+    text-align: center;
+    width: 90%;
+}
+
+.random-joke p {
+    margin: 0;
+}
+
+#punchline {
+    font-weight: bold;
+}
+
+@media (max-width: 400px)
+{
+    .random-joke {
+        font-size: .75rem;
+    }
+}

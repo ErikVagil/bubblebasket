@@ -10,6 +10,7 @@
     <link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
     <link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="main.css">
     <link 
         href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" 
         rel="stylesheet" 
@@ -30,6 +31,10 @@
     </header>
 
     <main class="container-fluid">
+        <div class="random-joke">
+            <p id="setup"></p>
+            <p id="punchline"></p>
+        </div>
         <div class="bubbles">
             <ul class="bubbles-list">
                 <li class="bubble">
@@ -95,6 +100,7 @@
         <div class="float-end">Link to <a href="https://github.com/ErikVagil/startup">Github</a> source</div>
     </footer>
 
+    <script src="main.js"></script>
     <script 
         src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" 
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" 
