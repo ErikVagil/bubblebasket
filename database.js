@@ -14,7 +14,7 @@ if (!username)
 const url = `mongodb+srv://${username}:${password}@${hostname}`;
 
 const client = new MongoClient(url);
-const userCollection = client.db("startup").collection("user");
+const userCollection = client.db("bubblebasket").collection("user");
 
 function getUser(email)
 {

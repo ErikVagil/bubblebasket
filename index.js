@@ -97,19 +97,17 @@ secureApiRouter.use(async (request, response, next) =>
     }
 });
 
-// !!! CHANGE !!!
-secureApiRouter.get("/scores", async (_request, response) =>
+secureApiRouter.get("/cart", async (request, response) =>
 {
-    const scores = await DB.getHighScores();
-    response.send(scores);
+    const cart = await DB.getUserCart(request.cookies[authCookieName]);
+    response.send(cart);
 });
 
-// !!! CHANGE !!!
-secureApiRouter.post("/score", async (request, response) =>
+secureApiRouter.post("/item", async (request, response) =>
 {
-    DB.addScore(request.body);
-    const scores = await DB.getHighScores();
-    response.send(scores);
+    DB.addItemToUser(request.cookies[authCookieName], request.body.item);
+    const cart = await DB.getUserCart(request.cookies[authCookieName]);
+    response.send(cart);
 });
 
 app.use(function (error, _request, response, _next)
