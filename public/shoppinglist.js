@@ -57,7 +57,7 @@ async function clearList()
 {
     try
     {
-        await fetch("api/cart/clear");
+        await fetch("/api/cart/clear", { method: "DELETE" });
     }
     catch
     {
