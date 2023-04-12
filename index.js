@@ -99,15 +99,24 @@ secureApiRouter.use(async (request, response, next) =>
 
 secureApiRouter.get("/cart", async (request, response) =>
 {
-    const cart = await DB.getUserCart(request.body.email);
+    const authToken = request.cookies[authCookieName];
+    const cart = await DB.getUserCart(authToken);
     response.send(cart);
 });
 
-secureApiRouter.post("/item", async (request, response) =>
+secureApiRouter.put("/cart/update", async (request, response) =>
 {
-    DB.addItemToUser(request.body.email, request.body.item);
-    const cart = await DB.getUserCart(request.body.email);
+    const authToken = request.cookies[authCookieName];
+    await DB.updateUserCart(authToken, request.body);
+    const cart = await DB.getUserCart(authToken);
     response.send(cart);
+});
+
+secureApiRouter.delete("/cart/clear", async (request, response) =>
+{
+    const authToken = request.cookies[authCookieName];
+    await DB.clearUserCart(authToken);
+    response.status(204).end();
 });
 
 app.use(function (error, _request, response, _next)

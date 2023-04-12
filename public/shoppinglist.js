@@ -1,11 +1,22 @@
-function loadListFromCookies()
+async function loadListFromCookies()
 {
     // Get items from storage
     let items = [];
-    const itemsText = localStorage.getItem("items");
-    if (itemsText)
+
+    try
     {
-        items = JSON.parse(itemsText);
+        const response = await fetch("/api/cart");
+        items = await response.json();
+
+        localStorage.setItem("cart", JSON.stringify(items));
+    }
+    catch
+    {
+        const itemsText = localStorage.getItem("cart");
+        if (itemsText)
+        {
+            items = JSON.parse(itemsText);
+        }
     }
 
     // Get table
@@ -42,9 +53,16 @@ function loadListFromCookies()
     }
 }
 
-function clearList()
+async function clearList()
 {
-    localStorage.removeItem("items");
+    try
+    {
+        await fetch("api/cart/clear");
+    }
+    catch
+    {
+        localStorage.removeItem("cart");
+    }
 
     const tableBodyElement = document.getElementById("shopping-list-table-body");
     tableBodyElement.innerHTML = ``;

@@ -16,12 +16,12 @@ const url = `mongodb+srv://${username}:${password}@${hostname}`;
 const client = new MongoClient(url);
 const userCollection = client.db("bubblebasket").collection("user");
 
-function getUser(email)
+async function getUser(email)
 {
     return userCollection.findOne({ email: email });
 }
 
-function getUserByToken(token)
+async function getUserByToken(token)
 {
     return userCollection.findOne({ token: token });
 }
@@ -43,22 +43,32 @@ async function createUser(email, password)
     return user;
 }
 
-async function addItemToUser(email, item)
+async function updateUserCart(token, cart)
 {
     userCollection.updateOne(
-        { email: email },
-        { $push: { cart: item } }
+        { token: token },
+        { $set: { cart: cart } }
     );
 }
 
-function getUserCart(email)
+async function getUserCart(token)
 {
-    return getUser(email).cart;
+    const user = await getUserByToken(token);
+    return user.cart;
+}
+
+function clearUserCart(token)
+{
+    userCollection.updateOne(
+        { token: token },
+        { $set: { cart: [] } }
+    );
 }
 
 module.exports = 
-{ 
-    addItemToUser, 
+{
+    clearUserCart,
+    updateUserCart, 
     getUserCart,
     getUser,
     getUserByToken,

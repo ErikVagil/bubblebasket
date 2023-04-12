@@ -1,14 +1,27 @@
-function addItemToCookies(category, item)
+async function addItemToCookies(category, item)
 {
-    // Get items from cookies and put into items list
+    // Get items from storage
     let items = [];
-    const itemsJSON = localStorage.getItem("items");
-    if (itemsJSON)
+
+    try
     {
-        items = JSON.parse(itemsJSON);
+        const response = await fetch("/api/cart");
+        items = await response.json();
+
+        localStorage.setItem("cart", JSON.stringify(items));
+    }
+    catch
+    {
+        const itemsText = localStorage.getItem("cart");
+        if (itemsText)
+        {
+            items = JSON.parse(itemsText);
+        }
     }
 
-    // See if item is already in list
+    console.log(items);
+
+    // See if item is already in list and update or add accordingly
     let foundItemIndex = items.findIndex((itemObject) => 
     {
         return (itemObject.itemValue === item) && (itemObject.categoryValue === category);
@@ -22,5 +35,19 @@ function addItemToCookies(category, item)
         items.push({categoryValue: category, itemValue: item, quantityValue: 1});
     }
 
-    localStorage.setItem("items", JSON.stringify(items));
+    console.log(items);
+
+    try
+    {
+        await fetch("api/cart/update", 
+        {
+            method: "PUT",
+            headers: { "content-type": "application/json" },
+            body: JSON.stringify(items)
+        });
+    }
+    catch
+    {
+        localStorage.setItem("cart", JSON.stringify(items));
+    }
 }
