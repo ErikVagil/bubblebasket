@@ -32,6 +32,16 @@ Amazon Web Services - EC2<br />
  - Know what the return value of functions is \(like if it returns a number, array, object, etc\)! That'll help avoid mistakes and bugs
  - Make code that's as reusable as possible and add parameters in the onclick HTML event
 
+### What I learned from making my startup web services
+ - NodeJS takes JavaScript code and runs it from the server
+ - Express manages HTTP routing and allows for GET, POST, PUT, DELETE, etc. calls to the server
+ - The method of routing, if it's not GET, must be specified when using `fetch` calls
+ - Credentials can be stored on the server for databases in order to make it more secure
+ - Authentication is important! Modules like bcrypt and uuid are used to make hard-to-crack tokens and such
+ - WebSockets allow for peer-to-peer connections after connecting to the server. This makes it easy to connect to other people online in real time without the fuss of any complicated or expensive HTTP calls
+ - That's pretty much it. A lot of what I gained from doing the web services was a deeper understanding and greater appreciation for the complexity of the internet and the lengths developers have to go to in order to maintain security on the web
+ - Hopefully this mountian of takeaways makes up for the fact that I accidentally deleted all of my Simon service-related updates :D
+
 <hr>
 
 ### What I want to remember from the suite of JavaScript assignments
@@ -52,3 +62,6 @@ Amazon Web Services - EC2<br />
  - Use localStorage to save and load using cookies
  - The ternary operator ?? is really convenient for making code concise
  - Partitioning code into classes makes for easy and reusable code
+
+## TO THE TA READING THIS
+You may have noticed that this README doesn't contain entries from after Simon-Javascript. That is because I erroneously used `git push --force` after getting a push conflict because I'm half awake and have been working on this project for the past 10 hours straight. Basically, please don't think I didn't do that part of the assignments. I did. I'm just dumb and lost the work and I don't know how to recover it. Also, Simon-Service, Simon-DB, Simon-Login, and Simon-Websocket are already graded so maybe you don't care.
