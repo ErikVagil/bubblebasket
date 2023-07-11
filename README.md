@@ -11,10 +11,9 @@ Key features
  - Ability to add custom items to bubble tree
 
 Log:<br />
-Amazon Web Services - EC2<br />
+Amazon Web Services - EC2 \(Note: these are no longer relevant\)<br />
  - Elastic IP address: 3.138.235.178
  - Public DNS: ec2-3-138-235-178.us-east-2.compute.amazonaws.com
- - AWS is pretty cool :>
 
 <hr>
 
@@ -60,6 +59,3 @@ Amazon Web Services - EC2<br />
  - Use localStorage to save and load using cookies
  - The ternary operator ?? is really convenient for making code concise
  - Partitioning code into classes makes for easy and reusable code
-
-## TO THE TA READING THIS
-You may have noticed that this README doesn't contain entries from after Simon-Javascript. That is because I erroneously used `git push --force` after getting a push conflict because I'm half awake and have been working on this project for the past 10 hours straight. Basically, please don't think I didn't do that part of the assignments. I did. I'm just dumb and lost the work and I don't know how to recover it. Also, Simon-Service, Simon-DB, Simon-Login, and Simon-Websocket are already graded so maybe you don't care.
